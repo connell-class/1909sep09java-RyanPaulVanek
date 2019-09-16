@@ -30,8 +30,21 @@ public class EvaluationService {
 	 * @return
 	 */
 	public String acronym(String phrase) {
-		// TODO Write an implementation for this method declaration
-		return null;
+		StringBuilder s = new StringBuilder();
+		char c;
+		boolean b = true;
+		for(int i = 0; i < phrase.length();i++) {
+			c = phrase.charAt(i);
+			if(Character.isLetter(c)&& b) {
+				s.append(Character.toUpperCase(c));
+				b = false;
+			}
+			else if(!Character.isLetter(c)) {
+				b = true;
+			}
+		}
+		
+		return s.toString();
 	}
 
 	/**
@@ -84,18 +97,18 @@ public class EvaluationService {
 		}
 
 		public boolean isEquilateral() {
-			// TODO Write an implementation for this method declaration
-			return false;
+			
+			return (sideOne==sideTwo && sideOne==sideThree);
 		}
 
 		public boolean isIsosceles() {
-			// TODO Write an implementation for this method declaration
-			return false;
+			
+			return (sideOne==sideTwo || sideOne==sideThree);
 		}
 
 		public boolean isScalene() {
-			// TODO Write an implementation for this method declaration
-			return false;
+			
+			return (sideOne != sideTwo && sideOne != sideThree);
 		}
 
 	}
@@ -116,7 +129,10 @@ public class EvaluationService {
 	 * @return
 	 */
 	public int getScrabbleScore(String string) {
-		// TODO Write an implementation for this method declaration
+		int p = 0;
+		for(int i = 0)
+		switch()
+		
 		return 0;
 	}
 
